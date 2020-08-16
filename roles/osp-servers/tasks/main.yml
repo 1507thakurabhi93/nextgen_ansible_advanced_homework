@@ -4,7 +4,7 @@
     name: app2
     image: rhel-guest
     meta: group=apps,deployment_name=dev
-    flavor: m2.small
+    flavor: m1.medium
     security_groups: app_servers
     key_name: ansible_ssh
     wait: yes
@@ -47,7 +47,7 @@
     name: app1
     image: rhel-guest
     meta: group=apps,deployment_name=dev
-    flavor: m2.small
+    flavor: m1.medium
     security_groups: app_servers
     key_name: ansible_ssh
     wait: yes
@@ -90,7 +90,7 @@
     name: db
     image: rhel-guest
     meta: group=appdbs,deployment_name=dev
-    flavor: m2.small
+    flavor: m1.medium
     security_groups: db_servers
     key_name: ansible_ssh
     wait: yes
@@ -133,7 +133,7 @@
     name: frontend
     image: rhel-guest
     meta: group=frontends,deployment_name=dev
-    flavor: m2.small
+    flavor: m1.medium
     security_groups: frontend_servers
     key_name: ansible_ssh
     wait: yes
