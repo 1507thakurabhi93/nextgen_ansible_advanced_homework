@@ -10,7 +10,7 @@
       - osp.smoke
   
   - debug:
-    msg: "{{ result.openstack_servers }}"
+     msg: "{{ result.openstack_servers }}"
     
   - name: Curl website
     uri:
