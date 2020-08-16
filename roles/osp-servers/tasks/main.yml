@@ -21,7 +21,7 @@
 
 - name: Add floating IP to app2
   os_floating_ip:
-    cloud: ospcloud
+    cloud: openstack
     state: present
     reuse: yes
     server: app2
