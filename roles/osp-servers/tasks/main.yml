@@ -1,6 +1,6 @@
 - name: Create app2 server instance
   os_server:
-    cloud: ospcloud
+    cloud: openstack
     name: app2
     image: rhel-guest
     meta: group=apps,deployment_name=dev
@@ -43,7 +43,7 @@
 
 - name: Create app1 server instance
   os_server:
-    cloud: ospcloud
+    cloud: openstack
     name: app1
     image: rhel-guest
     meta: group=apps,deployment_name=dev
@@ -64,7 +64,7 @@
 
 - name: Add floating IP to app1
   os_floating_ip:
-    cloud: ospcloud
+    cloud: openstack
     state: present
     reuse: yes
     server: app1
@@ -86,7 +86,7 @@
 
 - name: Create a db server instance
   os_server:
-    cloud: ospcloud
+    cloud: openstack
     name: db
     image: rhel-guest
     meta: group=appdbs,deployment_name=dev
@@ -107,7 +107,7 @@
 
 - name: Add floating IP to db
   os_floating_ip:
-    cloud: ospcloud
+    cloud: openstack
     state: present
     reuse: yes
     server: db
@@ -129,7 +129,7 @@
 
 - name: Create a server instance
   os_server:
-    cloud: ospcloud
+    cloud: openstack
     name: frontend
     image: rhel-guest
     meta: group=frontends,deployment_name=dev
@@ -150,7 +150,7 @@
 
 - name: Add floating IP to frontend
   os_floating_ip:
-    cloud: ospcloud
+    cloud: openstack
     state: present
     reuse: yes
     server: frontend
